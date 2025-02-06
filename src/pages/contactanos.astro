@@ -1,0 +1,30 @@
+---
+import Main from "../layouts/Main.astro";
+---
+
+<Main title="Contacto">
+  <div class="text-center">
+    <h1 class="display-4">Contáctanos</h1>
+    <h2 class="h5 text-muted">Queremos saber de ti</h2>
+    <p>Déjanos tu mensaje y te responderemos lo más pronto posible.</p>
+  </div>
+
+  <form class="container col-md-6 mx-auto mt-4 p-4 border rounded bg-light">
+    <div class="mb-3">
+      <label class="form-label">Nombre:</label>
+      <input type="text" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email:</label>
+      <input type="email" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Mensaje:</label>
+      <textarea class="form-control" rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Enviar</button>
+  </form>
+</Main>

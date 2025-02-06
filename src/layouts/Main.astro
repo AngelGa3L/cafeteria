@@ -1,0 +1,82 @@
+---
+export let title: string;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafés de Granos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      defer></script>
+  </head>
+  <body>
+    <header class="bg-dark text-white py-3">
+      <div class="container text-center">
+        <h1 class="display-4">Cafés de Granos</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown">Tipos de Cafés</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="/cafes/arabica">Arábica</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/cafes/liberica"
+                        >Libérica</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/cafes/robusta">Robusta</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/cafes/excelsa">Excelsa</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contactanos">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container my-5">
+      <slot />
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <p>© {new Date().getFullYear()} Cafés de Granos</p>
+    </footer>
+  </body>
+</html>
