@@ -27,6 +27,8 @@ export let title: string;
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNav"
+              aria-label="Abrir menú de navegación"
+              aria-expanded="false"
             >
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,15 +45,18 @@ export let title: string;
                     class="nav-link dropdown-toggle"
                     href="#"
                     role="button"
-                    data-bs-toggle="dropdown">Tipos de Cafés</a
+                    data-bs-toggle="dropdown"
                   >
+                    Tipos de Cafés
+                  </a>
                   <ul class="dropdown-menu">
                     <li>
                       <a class="dropdown-item" href="/cafes/arabica">Arábica</a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="/cafes/liberica"
-                        >Libérica</a>
+                        >Libérica</a
+                      >
                     </li>
                     <li>
                       <a class="dropdown-item" href="/cafes/robusta">Robusta</a>
